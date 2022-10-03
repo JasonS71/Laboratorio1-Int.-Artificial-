@@ -78,6 +78,25 @@ while True:
         laberinto[fila_actual][columna_actual] = "A"
         break
 
+def mover_abajo(laberinto1, fila1, columna1):
+    laberinto1[fila1][columna1] = " "
+    fila1 +=1
+    laberinto1[fila1][columna1] = "A"
+
+def mover_arriba(laberinto1, fila1, columna1):
+    laberinto1[fila1][columna1] = " "
+    fila1 -=1
+    laberinto1[fila1][columna1] = "A"
+
+def mover_derecha(laberinto1, fila1, columna1):
+    laberinto1[fila1][columna1] = " "
+    columna1 +=1
+    laberinto1[fila1][columna1] = "A"
+
+def mover_izquierda(laberinto1, fila1, columna1):
+    laberinto1[fila1][columna1] = " "
+    columna1 -=1
+    laberinto1[fila1][columna1] = "A"
 
 #Mover al caracter a espacios libres sin salirnos del laberinto
 cantidad_movimientos = 20
@@ -88,7 +107,7 @@ while cantidad_movimientos > 0:
     if direccion == 0:
         if(fila_actual == numero_filas-1): #Nos aseguramos de que no se salga del laberinto
             continue
-        # Nos movemos hacia la izquierda
+        # Nos movemos hacia la abajo
         elif laberinto[fila_actual+1][columna_actual] == " ":
             laberinto[fila_actual][columna_actual] = " "
             fila_actual += 1
@@ -103,7 +122,7 @@ while cantidad_movimientos > 0:
     elif direccion == 1:
         if(fila_actual == 0): #Nos aseguramos de que no se salga del laberinto
             continue
-        # Nos movemos hacia la derecha
+        # Nos movemos hacia la arriba
         elif laberinto[fila_actual-1][columna_actual] == " ":
             laberinto[fila_actual][columna_actual] = " "
             fila_actual -= 1
@@ -118,7 +137,7 @@ while cantidad_movimientos > 0:
     elif direccion == 2:
         if(columna_actual == numero_columnas-1): #Nos aseguramos de que no se salga del laberinto
             continue
-        # Nos movemos hacia la arriba
+        # Nos movemos hacia la derecha
         elif laberinto[fila_actual][columna_actual+1] == " ":
             laberinto[fila_actual][columna_actual] = " "
             columna_actual += 1
@@ -133,7 +152,7 @@ while cantidad_movimientos > 0:
     elif direccion == 3:
         if(columna_actual == 0): #Nos aseguramos de que no se salga del laberinto
             continue
-        # Nos movemos hacia la abajo
+        # Nos movemos hacia la izquierda
         elif laberinto[fila_actual][columna_actual-1] == " ":
             laberinto[fila_actual][columna_actual] = " "
             columna_actual -= 1
