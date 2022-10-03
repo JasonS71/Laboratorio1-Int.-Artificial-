@@ -44,9 +44,9 @@ def crear_mapa_laberinto(numero_filas, numero_columnas, numero_paredes, numero_e
     return mapa_laberinto
 
 
-numero_filas = 7 #int(input('Introduzca el número de filas del laberinto: '))
-numero_columnas = 5 #int(input('Introduzca el número de columnas del laberinto: '))
-numero_paredes = 22 #int(input('Introduzca el número de paredes del laberinto: '))
+numero_filas = int(input('Introduzca el número de filas del laberinto: '))
+numero_columnas = int(input('Introduzca el número de columnas del laberinto: '))
+numero_paredes = int(input('Introduzca el número de paredes del laberinto: '))
 numero_espacios = numero_filas * numero_columnas - numero_paredes
 
 laberinto = crear_mapa_laberinto(numero_filas, numero_columnas, numero_paredes, numero_espacios)
